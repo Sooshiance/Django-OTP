@@ -19,6 +19,7 @@ def sendToken(request, phone):
     
     print(f"The OTP is : {otp}")
     
+    # TODO : `linenumber` prameter is the phone that you'v register with it, in sms.ir
     user_sms = SmsIr(api_key='', linenumber=config("LINE_NUMBER"))
     
     user_sms.send_sms(number=phone, message="""
